@@ -1,12 +1,12 @@
 
 // this doesn't work in openscad, import doesn't return the path or poly data
-//poly = import("/home/rob/3D_Print/Trefoil_Propeller/airfoil.svg", center=true);
+//poly = import("./airfoil.svg", center=true);
 
 // the svg path is a 2D shape in x/y, extruded in z
 module svg_wing() {
     linear_extrude(height=10, convexity=10) {
         scale(0.01)
-            import("/home/rob/3D_Print/Trefoil_Propeller/airfoil.svg", center=true);
+            import("./airfoil.svg", center=true);
     }
 }
 
